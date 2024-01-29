@@ -6,6 +6,7 @@ class SocketService {
   handleMessage(message) {
     console.log('Handling message:', message);
     this.io.emit('chat message', message);
+    // Additional logic on save message
   }
 }
 

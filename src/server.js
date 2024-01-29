@@ -10,12 +10,6 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIO(server);
 
-// app.use(cors());
-
-// // Permitir solicitações do domínio onde o cliente React está hospedado (http://localhost:3001)
-// io.origins('http://localhost:3001');
-
-// Initialize instances
 const chatService = new SocketService(io);
 
 io.on('connection', (socket) => {
@@ -32,6 +26,6 @@ io.on('connection', (socket) => {
   });
 });
 
-server.listen(3000, () => {
-  console.log('Server running on port 3000');
+server.listen(3002, () => {
+  console.log('Server running on port 3002');
 });
